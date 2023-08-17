@@ -58,7 +58,7 @@ if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250
             password += b[i]
         }
 
-    console.log(password)
+    console.log("Su contraseña es:" + password)
 } 
 else {
   console.log("Las entradas deben ser solo letras minúsculas, tener entre 1 y 250,000 caracteres.");
