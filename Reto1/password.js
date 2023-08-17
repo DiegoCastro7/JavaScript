@@ -33,18 +33,17 @@ The first line contains the string a.
 The second line the string b.
 */
 
-let a = "hackerrank"
-let b = "mountain"
 let password = ""
 let tamaño = 0
-bander=true
+let a = prompt("Por favor, ingrese la primer parte de la contraseña :");
+let b = prompt("Por favor, ingrese la segunda parte de la contraseña:");
 
-if (a.length  || b.length){
-    bander=false
-}
+let soloLetras = /^[a-z]+$/;
 
-if (bander==true) {
-        if (a.length >= b.length) {
+if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250000 && b.length >= 1 && b.length <= 250000) {
+    console.log("Los datos son correctos");
+    
+    if (a.length >= b.length) {
         tamaño = a.length
     }
     else {
@@ -58,7 +57,14 @@ if (bander==true) {
         if (i<b.length){
             password += b[i]
         }
-    }
 
     console.log(password)
+} 
+else {
+  console.log("Las entradas deben ser solo letras minúsculas, tener entre 1 y 250,000 caracteres.");
 }
+
+
+
+
+
