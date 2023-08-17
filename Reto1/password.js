@@ -57,7 +57,7 @@ if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250
     //Uso de metodo localeCompare y condicional ternario
     tamaño = a.localeCompare(b) >= 0 ? a.length : b.length;
     // en cada recorrido asigna un caracter del string a y del b, si uno es mas corto que el otro la password continua con el string mas largo
-    for (let i = 0; i < tamaño; i++) {
+    for (let i = 0; i <= tamaño; i++) {
         if (i<a.length){
             password += a[i]
         }
@@ -67,9 +67,10 @@ if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250
 
     console.log("Su contraseña es:" + password)
 } 
+}
 // si no se cumple con las condiciones
 else {
-  console.log("Las entradas deben ser solo letras minúsculas, tener entre 1 y 250,000 caracteres.");
+    console.log("Las entradas deben ser solo letras minúsculas, tener entre 1 y 250,000 caracteres.");
 }
 
 
