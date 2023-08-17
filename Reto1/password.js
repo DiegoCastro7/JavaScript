@@ -54,6 +54,7 @@ if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250
         tamaño = b.length
     } */
     //Metodo 2
+    //Uso de metodo localeCompare y condicional ternario
     tamaño = a.localeCompare(b) >= 0 ? a.length : b.length;
     // en cada recorrido asigna un caracter del string a y del b, si uno es mas corto que el otro la password continua con el string mas largo
     for (let i = 0; i < tamaño; i++) {
