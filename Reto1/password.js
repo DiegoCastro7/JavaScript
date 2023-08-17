@@ -33,23 +33,26 @@ The first line contains the string a.
 The second line the string b.
 */
 
-let password = ""
-let tamaño = 0
+// Declaracion de lets
+let password = "" // Acumulador de la contraseña 
+let tamaño = 0 // Iterador en los string, coge el tamaño del string mas largo
+// Inputs para los dos strings
 let a = prompt("Por favor, ingrese la primer parte de la contraseña :");
 let b = prompt("Por favor, ingrese la segunda parte de la contraseña:");
-
+// Uso de "expresiónes regulares" tema nuevo
 let soloLetras = /^[a-z]+$/;
-
+// Uso de metodo "test" tema nuevo
+// Comprueba que el string cumpla con la condicion dada por la expresion regular y el tamaño deseado
 if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250000 && b.length >= 1 && b.length <= 250000) {
     console.log("Los datos son correctos");
-    
+    // asigna el tamaño lara saber cuantas veces iterar
     if (a.length >= b.length) {
         tamaño = a.length
     }
     else {
         tamaño = b.length
     }
-
+    // en cada recorrido asigna un caracter del string a y del b, si uno es mas corto que el otro la password continua con el string mas largo
     for (let i = 0; i < tamaño; i++) {
         if (i<a.length){
             password += a[i]
@@ -60,6 +63,7 @@ if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250
 
     console.log("Su contraseña es:" + password)
 } 
+// si no se cumple con las condiciones
 else {
   console.log("Las entradas deben ser solo letras minúsculas, tener entre 1 y 250,000 caracteres.");
 }
