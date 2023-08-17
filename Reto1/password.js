@@ -46,12 +46,15 @@ let soloLetras = /^[a-z]+$/;
 if (soloLetras.test(a) && soloLetras.test(b) && a.length >= 1 && a.length <= 250000 && b.length >= 1 && b.length <= 250000) {
     console.log("Los datos son correctos");
     // asigna el tamaño lara saber cuantas veces iterar
-    if (a.length >= b.length) {
+    //Metodo 1
+    /* if (a.length >= b.length) {
         tamaño = a.length
     }
     else {
         tamaño = b.length
-    }
+    } */
+    //Metodo 2
+    tamaño = a.localeCompare(b) >= 0 ? a.length : b.length;
     // en cada recorrido asigna un caracter del string a y del b, si uno es mas corto que el otro la password continua con el string mas largo
     for (let i = 0; i < tamaño; i++) {
         if (i<a.length){
