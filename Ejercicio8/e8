@@ -1,0 +1,19 @@
+//###################################
+// Ejercicio 8
+//####################################
+
+//Desarrolado por: Diego Fernando Castro Torres
+
+/*Crea un arreglo de 10 posiciones de nümeros con
+valores aleatorios (investiga cåmo hacerlo). Muestra
+por consola el indice y el valor al que corresponde. Usa
+dos métodos, uno para rellenar valores y Otro para
+mostrar.*/
+let arreglo = [];
+for (let i = 0;i < 10;i++) {
+    let valor = Math.random();
+    arreglo += valor.toString();
+}
+arreglo.forEach(function (elemento, indice) {
+    console.log("Indice: " + indice + "Valor: " + elemento);
+})
