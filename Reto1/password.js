@@ -32,3 +32,33 @@ Input from stdin will be processed as follows and passed to the function:
 The first line contains the string a.
 The second line the string b.
 */
+
+let a = "hackerrank"
+let b = "mountain"
+let password = ""
+let tamaño = 0
+bander=true
+
+if (a.length  || b.length){
+    bander=false
+}
+
+if (bander==true) {
+        if (a.length >= b.length) {
+        tamaño = a.length
+    }
+    else {
+        tamaño = b.length
+    }
+
+    for (let i = 0; i < tamaño; i++) {
+        if (i<a.length){
+            password += a[i]
+        }
+        if (i<b.length){
+            password += b[i]
+        }
+    }
+
+    console.log(password)
+}
